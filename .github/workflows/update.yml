@@ -15,7 +15,7 @@ jobs:
     - name: Run update script
       shell: pwsh
       run: ./update.ps1
-    - uses: EndBug/add-and-commit@v7
+    - uses: EndBug/add-and-commit@v9
       with:
         add: manifests
         branch: main

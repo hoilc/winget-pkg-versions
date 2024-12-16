@@ -1,0 +1,24 @@
+name: Update Winget Package Versions
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Run every 3 hours
+  workflow_dispatch:        # Allow manual trigger
+  
+jobs:
+  update:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run update script
+      shell: pwsh
+      run: ./update.ps1
+    - uses: EndBug/add-and-commit@v7
+      with:
+        add: manifests
+        branch: main
+        author_name: hoilc
+        author_email: hoilc@foxmail.com
+        message: 'chore: update manifests (run id ${{ github.run_id }})'

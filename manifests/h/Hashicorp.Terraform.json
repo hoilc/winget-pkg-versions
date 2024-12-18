@@ -1,4 +1,4 @@
 {
-  "version": "1.9.8",
-  "id": "Hashicorp.Terraform"
+  "id": "Hashicorp.Terraform",
+  "version": "1.9.8"
 }

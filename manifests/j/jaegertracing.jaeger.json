@@ -1,4 +1,4 @@
 {
-  "version": "1.48",
-  "id": "jaegertracing.jaeger"
+  "id": "jaegertracing.jaeger",
+  "version": "1.48"
 }

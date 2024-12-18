@@ -1,4 +1,4 @@
 {
-  "version": "5.0.0",
-  "id": "Dell.CommandConfigure"
+  "id": "Dell.CommandConfigure",
+  "version": "5.0.0"
 }

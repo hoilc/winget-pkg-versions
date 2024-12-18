@@ -1,4 +1,4 @@
 {
-  "version": "0.26.0",
-  "id": "Kubernetes.kind"
+  "id": "Kubernetes.kind",
+  "version": "0.26.0"
 }

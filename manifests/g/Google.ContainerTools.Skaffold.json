@@ -1,4 +1,4 @@
 {
-  "version": "2.13.2",
-  "id": "Google.ContainerTools.Skaffold"
+  "id": "Google.ContainerTools.Skaffold",
+  "version": "2.13.2"
 }

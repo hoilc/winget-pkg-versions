@@ -1,4 +1,4 @@
 {
-  "version": "4.9.1",
-  "id": "Wazuh.WazuhAgent"
+  "id": "Wazuh.WazuhAgent",
+  "version": "4.9.1"
 }

@@ -7,18 +7,23 @@ Retrieve latest versions for winget packages.
 ```
 manifests/
   a/
-    Adobe.Acrobat.Reader.yaml
-    Atlassian.Sourcetree.yaml
+    Adobe.Acrobat.Reader.json
+    Atlassian.Sourcetree.json
   b/
-    Blender.Blender.yaml
+    Blender.Blender.json
   m/
-    Microsoft.Windows.yaml
+    Microsoft.Windows.json
   ...
 ```
 
-Content Example:
+## Example
 
+```bash
+curl https://raw.githubusercontent.com/hoilc/winget-pkg-versions/main/manifests/a/a/Adobe.Acrobat.Pro.json
 ```
-id: Adobe.Acrobat.Reader
-version: 22.002.20222
-```
+
+```json
+{
+  "id": "Adobe.Acrobat.Pro",
+  "version": "24.005.20320"
+}

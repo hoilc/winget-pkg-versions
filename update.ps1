@@ -58,10 +58,11 @@ New-Item -ItemType Directory -Path $outputDir | Out-Null
 
 # Process each manifest
 foreach ($manifest in $results) {
-    $yamlContent = @"
-id: $($manifest.Id)
-version: $($manifest.Version)
-"@
+    # Create JSON content
+    $jsonContent = @{
+        id = $manifest.Id
+        version = $manifest.Version
+    } | ConvertTo-Json
     
     # Get first character of ID in lowercase for subdirectory
     $subDir = $manifest.Id.Substring(0, 1).ToLower()
@@ -73,8 +74,8 @@ version: $($manifest.Version)
     }
     
     # Create file path based on manifest ID in the subdirectory
-    $filePath = Join-Path $subDirPath "$($manifest.Id).yaml"
-    $yamlContent | Out-File -FilePath $filePath -Encoding UTF8 -Force
+    $filePath = Join-Path $subDirPath "$($manifest.Id).json"
+    $jsonContent | Out-File -FilePath $filePath -Encoding UTF8 -Force
 }
 
 # Cleanup

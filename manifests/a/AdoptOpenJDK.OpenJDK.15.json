@@ -1,4 +1,4 @@
 {
-  "id": "AdoptOpenJDK.OpenJDK.15",
-  "version": "jdk-15.0.2+7_openj9-0.24.0"
+  "version": "jdk-15.0.2+7_openj9-0.24.0",
+  "id": "AdoptOpenJDK.OpenJDK.15"
 }

@@ -19,7 +19,7 @@ manifests/
 ## Example
 
 ```bash
-curl https://raw.githubusercontent.com/hoilc/winget-pkg-versions/main/manifests/a/a/Adobe.Acrobat.Pro.json
+curl https://raw.githubusercontent.com/hoilc/winget-pkg-versions/refs/heads/main/manifests/a/Adobe.Acrobat.Pro.json
 ```
 
 ```json

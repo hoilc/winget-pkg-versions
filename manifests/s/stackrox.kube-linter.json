@@ -1,4 +1,4 @@
 {
-  "version": "0.6.8",
-  "id": "stackrox.kube-linter"
+  "id": "stackrox.kube-linter",
+  "version": "0.6.8"
 }

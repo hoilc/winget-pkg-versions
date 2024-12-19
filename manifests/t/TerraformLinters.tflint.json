@@ -1,4 +1,4 @@
 {
-  "version": "0.54.0",
-  "id": "TerraformLinters.tflint"
+  "id": "TerraformLinters.tflint",
+  "version": "0.54.0"
 }

@@ -1,4 +1,4 @@
 {
-  "version": "2.8.9",
-  "id": "argoproj.argocd"
+  "id": "argoproj.argocd",
+  "version": "2.8.9"
 }

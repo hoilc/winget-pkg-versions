@@ -1,4 +1,4 @@
 {
-  "version": "1.8.5",
-  "id": "Kubernetes.clusterctl"
+  "id": "Kubernetes.clusterctl",
+  "version": "1.8.5"
 }

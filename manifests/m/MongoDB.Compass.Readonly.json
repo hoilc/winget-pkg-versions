@@ -1,4 +1,4 @@
 {
-  "version": "1.45.0.0",
-  "id": "MongoDB.Compass.Readonly"
+  "id": "MongoDB.Compass.Readonly",
+  "version": "1.45.0.0"
 }

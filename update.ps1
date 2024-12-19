@@ -59,7 +59,7 @@ New-Item -ItemType Directory -Path $outputDir | Out-Null
 # Process each manifest
 foreach ($manifest in $results) {
     # Create JSON content
-    $jsonContent = @{
+    $jsonContent = [ordered]@{
         id = $manifest.Id
         version = $manifest.Version
     } | ConvertTo-Json

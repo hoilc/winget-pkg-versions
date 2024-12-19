@@ -1,4 +1,4 @@
 {
-  "id": "Nvidia.CUDA",
-  "version": "12.6"
+  "version": "12.6",
+  "id": "Nvidia.CUDA"
 }

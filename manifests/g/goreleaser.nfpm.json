@@ -1,4 +1,4 @@
 {
-  "id": "goreleaser.nfpm",
-  "version": "2.41.1"
+  "version": "2.41.1",
+  "id": "goreleaser.nfpm"
 }

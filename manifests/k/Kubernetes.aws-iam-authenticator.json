@@ -1,4 +1,4 @@
 {
-  "id": "Kubernetes.aws-iam-authenticator",
-  "version": "0.6.29"
+  "version": "0.6.29",
+  "id": "Kubernetes.aws-iam-authenticator"
 }

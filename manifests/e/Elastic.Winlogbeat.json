@@ -1,4 +1,4 @@
 {
-  "version": "8.7.1",
-  "id": "Elastic.Winlogbeat"
+  "id": "Elastic.Winlogbeat",
+  "version": "8.7.1"
 }

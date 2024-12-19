@@ -1,4 +1,4 @@
 {
-  "version": "13.3 2024.07",
-  "id": "Arm.GnuArmEmbeddedToolchain"
+  "id": "Arm.GnuArmEmbeddedToolchain",
+  "version": "13.3 2024.07"
 }

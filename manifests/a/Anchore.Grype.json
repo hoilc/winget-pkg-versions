@@ -1,4 +1,4 @@
 {
-  "version": "0.86.1",
-  "id": "Anchore.Grype"
+  "id": "Anchore.Grype",
+  "version": "0.86.1"
 }

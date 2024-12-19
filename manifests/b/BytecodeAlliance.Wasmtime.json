@@ -1,4 +1,4 @@
 {
-  "version": "9.0.4",
-  "id": "BytecodeAlliance.Wasmtime"
+  "id": "BytecodeAlliance.Wasmtime",
+  "version": "9.0.4"
 }

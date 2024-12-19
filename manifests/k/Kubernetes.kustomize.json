@@ -1,4 +1,4 @@
 {
-  "version": "5.5.0",
-  "id": "Kubernetes.kustomize"
+  "id": "Kubernetes.kustomize",
+  "version": "5.5.0"
 }

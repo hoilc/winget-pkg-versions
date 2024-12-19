@@ -1,4 +1,4 @@
 {
-  "version": "0.1.4",
-  "id": "Microsoft.Azure.Kubelogin"
+  "id": "Microsoft.Azure.Kubelogin",
+  "version": "0.1.4"
 }

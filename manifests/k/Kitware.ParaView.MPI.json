@@ -1,4 +1,4 @@
 {
-  "version": "5.11.2",
-  "id": "Kitware.ParaView.MPI"
+  "id": "Kitware.ParaView.MPI",
+  "version": "5.11.2"
 }

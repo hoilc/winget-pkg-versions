@@ -1,4 +1,4 @@
 {
-  "version": "14.2.0-19.1.1-12.0.0-r2",
-  "id": "BrechtSanders.WinLibs.POSIX.MSVCRT.LLVM"
+  "id": "BrechtSanders.WinLibs.POSIX.MSVCRT.LLVM",
+  "version": "14.2.0-19.1.1-12.0.0-r2"
 }

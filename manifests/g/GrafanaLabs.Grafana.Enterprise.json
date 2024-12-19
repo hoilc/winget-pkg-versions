@@ -1,4 +1,4 @@
 {
-  "version": "9.5.0.0",
-  "id": "GrafanaLabs.Grafana.Enterprise"
+  "id": "GrafanaLabs.Grafana.Enterprise",
+  "version": "9.5.0.0"
 }

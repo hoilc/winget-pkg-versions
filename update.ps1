@@ -11,11 +11,15 @@ $downloadSuccess = $false
 
 while ($retryCount -lt $maxRetries -and -not $downloadSuccess) {
     try {
-        $response = Invoke-WebRequest -Uri "https://cdn.winget.microsoft.com/cache/source.msix" -OutFile $msixPath -UseBasicParsing
+        Write-Host "Downloading source.msix..."
+        $response = Invoke-WebRequest -Uri "https://cdn.winget.microsoft.com/cache/source.msix" -OutFile $msixPath -PassThru
+        Write-Host "Downloaded source.msix with status code $($response.StatusCode)"
         if ($response.StatusCode -eq 200 -and (Test-Path $msixPath)) {
             # Verify if the file is a valid ZIP
             try {
+                Write-Host "Verifying downloaded file..."
                 [io.compression.zipfile]::OpenRead($msixPath).Dispose()
+                Write-Host "Downloaded file is a valid ZIP"
                 $downloadSuccess = $true
             } catch {
                 Remove-Item $msixPath -Force

@@ -18,7 +18,6 @@ jobs:
     - uses: EndBug/add-and-commit@v9
       with:
         add: manifests
-        branch: main
         author_name: hoilc
         author_email: hoilc@foxmail.com
         message: 'chore: update manifests (run id ${{ github.run_id }})'

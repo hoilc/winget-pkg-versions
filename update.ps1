@@ -4,10 +4,33 @@ $msixPath = Join-Path $tempPath "source.msix"
 $extractPath = Join-Path $tempPath "winget_source"
 $dbPath = Join-Path $extractPath "Public/index.db"
 
-# Download the MSIX file 
-Invoke-WebRequest -Uri "https://cdn.winget.microsoft.com/cache/source.msix" -OutFile $msixPath
-if (-not (Test-Path $msixPath)) {
-    throw "Failed to download MSIX file"
+# Download the MSIX file with retry mechanism
+$retryCount = 0
+$maxRetries = 3
+$downloadSuccess = $false
+
+while ($retryCount -lt $maxRetries -and -not $downloadSuccess) {
+    try {
+        $response = Invoke-WebRequest -Uri "https://cdn.winget.microsoft.com/cache/source.msix" -OutFile $msixPath -UseBasicParsing
+        if ($response.StatusCode -eq 200 -and (Test-Path $msixPath)) {
+            # Verify if the file is a valid ZIP
+            try {
+                [io.compression.zipfile]::OpenRead($msixPath).Dispose()
+                $downloadSuccess = $true
+            } catch {
+                Remove-Item $msixPath -Force
+                throw "Downloaded file is not a valid ZIP"
+            }
+        } else {
+            throw "HTTP request failed with status code $($response.StatusCode)"
+        }
+    } catch {
+        $retryCount++
+        if ($retryCount -ge $maxRetries) {
+            throw "Failed to download MSIX file after $maxRetries attempts"
+        }
+        Start-Sleep -Seconds 5
+    }
 }
 
 # Create extraction directory if it doesn't exist
@@ -17,7 +40,12 @@ if (Test-Path $extractPath) {
 New-Item -ItemType Directory -Path $extractPath | Out-Null
 
 # Extract MSIX as ZIP
-Expand-Archive -Path $msixPath -DestinationPath $extractPath -Force
+try {
+    Expand-Archive -Path $msixPath -DestinationPath $extractPath -Force
+} catch {
+    Write-Host "Failed to extract MSIX file: $_"
+    exit 1
+}
 
 # Install PSSQLite module if not present
 if (-not (Get-Module -ListAvailable -Name PSSQLite)) {

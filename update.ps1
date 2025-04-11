@@ -6,7 +6,7 @@ $dbPath = Join-Path $extractPath "Public/index.db"
 
 # Download the MSIX file with retry mechanism
 $retryCount = 0
-$maxRetries = 3
+$maxRetries = 5
 $downloadSuccess = $false
 
 while ($retryCount -lt $maxRetries -and -not $downloadSuccess) {
@@ -33,7 +33,7 @@ while ($retryCount -lt $maxRetries -and -not $downloadSuccess) {
         if ($retryCount -ge $maxRetries) {
             throw "Failed to download MSIX file after $maxRetries attempts"
         }
-        Start-Sleep -Seconds 5
+        Start-Sleep -Seconds 30
     }
 }
 
